@@ -5,7 +5,6 @@ local max_client = 64
 
 skynet.start(function()
 	skynet.error("Server start")
-
 	skynet.newservice("console")
 	skynet.newservice("debug_console",8000)
 
@@ -17,13 +16,13 @@ skynet.start(function()
 	})
 	skynet.error("Watchdog listen on", 8888)
 
-	local service = skynet.newservice("pbc")
+	skynet.newservice("pbc")
 	
-	service = skynet.newservice("mongodb")
-	skynet.send(service, "lua", "init")
+	local service_db = skynet.newservice("mongodb")
+	skynet.send(service_db, "lua", "init")
 
-	service = skynet.newservice("hall")
-	skynet.call(service, "lua", "start")
+	local service_hall = skynet.newservice("hall")
+	skynet.call(service_hall, "lua", "start")
 
 	skynet.exit()
 end)

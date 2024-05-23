@@ -1,19 +1,18 @@
 
-ì
-proto/room.protoRoom"5
-RoomInfo
+›
+proto/room.protoRoom"H
+RoomInfo
+id (Rid
+game (	Rgame
+service (Rservice"
+RoomListReq"1
+RoomListRsp"
+list (2.Room.RoomInfoRlist"#
+EnterReq
+room_id (RroomId"!
+EnterRsp
+err_no (RerrNo"
 
-id (
-game (	
-service ("
-RoomListReq"+
-RoomListRsp
-list (2.Room.RoomInfo"
-EnterReq
-room_id ("
-EnterRsp
-err_no ("
-
-LeaveReq"
-LeaveRsp
-err_no (
+LeaveReq"!
+LeaveRsp
+err_no (RerrNo

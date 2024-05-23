@@ -4,7 +4,7 @@ local bsonlib = require "bson"
 
 local host = "127.0.0.1"
 local db_client
-local db_name = "poker"
+local db_name = "chess"
 local db
 
 local CMD = {}

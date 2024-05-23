@@ -1,7 +1,7 @@
 local skynet = require "skynet"
 require "skynet.manager"
 local utils = require "utils"
-local protobuf = require "protobuf"
+local pb = require "pb"
 
 local pb_files = {
 	"./proto/login.pb",
@@ -13,19 +13,19 @@ local cmd = {}
 
 function cmd.init()
 	for _,v in ipairs(pb_files) do
-		utils.print(protobuf.register_file(v))
+		utils.print(pb.loadfile(v))
 	end
 end
 
 function cmd.encode(msg_name, msg)
 	skynet.error("encode"..msg_name)
 	utils.print(msg)
-	return protobuf.encode(msg_name, msg)
+	return pb.encode(msg_name, msg)
 end
 
 function cmd.decode(msg_name, data)
 	skynet.error("decode ".. msg_name.. " " .. type(data) .." " .. #data)
-	return protobuf.decode(msg_name, data)
+	return pb.decode(msg_name, data)
 end
 
 function cmd.test()

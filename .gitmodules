@@ -7,3 +7,6 @@
 [submodule "3rd/protoc-gen-lua"]
 	path = 3rd/protoc-gen-lua
 	url = https://github.com/sean-lin/protoc-gen-lua.git
+[submodule "3rd/lua-protobuf"]
+	path = 3rd/lua-protobuf
+	url = https://github.com/starwing/lua-protobuf
